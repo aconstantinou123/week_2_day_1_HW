@@ -27,4 +27,7 @@ end
     book_info(books, title)[:rental_details]
   end
 
+  def add_book(books, new_book)
+    books << new_book
+  end
 end

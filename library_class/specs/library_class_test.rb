@@ -19,6 +19,15 @@ class TestLibraryClass < Minitest::Test
   # end
 
   def setup
+
+    @new_book = {
+      title: "the_shining",
+      rental_details: {
+        student_name: "",
+        date: ""
+      }
+    }
+
 		@books = [
 			{
 				title: "lord_of_the_rings",
@@ -71,5 +80,10 @@ class TestLibraryClass < Minitest::Test
         date: "12/06/15"
       }
       assert_equal(result, @library.rental_info(@books, "1q84"))
+  end
+
+  def test_add_book
+    @library.add_book(@books, @new_book)
+    assert_equal(4, @books.length)
   end
 end
