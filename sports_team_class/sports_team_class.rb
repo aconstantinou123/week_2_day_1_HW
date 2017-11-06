@@ -9,6 +9,18 @@ class Team
     @coach_name = input_coach_name
   end
 
+  def add_player(name)
+    @players_names.push(name)
+  end
+
+  def check_players(name)
+    if @players_names.include?(name)
+      return true
+    else
+      return false
+    end
+  end
+
   # def team_name
   #   return @team_name
   # end
