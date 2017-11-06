@@ -25,4 +25,16 @@ class TestSingleClass < MiniTest::Test
     student.cohort = 18
     assert_equal(18, student.cohort)
   end
+
+  def test_student_can_talk
+    student = Student.new("Alex", 17)
+    student.talk()
+    assert_equal("I can talk", student.talk())
+  end
+
+  def test_favourite_language
+    student = Student.new("Alex", 17)
+    student.say_favourite_language("Ruby")
+    assert_equal("I love Ruby", student.say_favourite_language("Ruby"))
+  end
 end
