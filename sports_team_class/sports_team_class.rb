@@ -22,6 +22,16 @@ class Team
     end
   end
 
+  def award_points(match_outcome)
+    if match_outcome == 'win'
+      @points += 10
+    elsif match_outcome == 'lose'
+      @points
+    else
+      puts 'Error'
+    end
+  end
+
   # def team_name
   #   return @team_name
   # end
